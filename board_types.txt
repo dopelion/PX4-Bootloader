@@ -1,7 +1,7 @@
 # this file lists all board types for boards that use the bootloader
 # protocol implemented in this bootloader.
 # NOTE: This file is now protected with a CI action that checks for conflicts.
-# you can run the tool locally ./Tools/check_board_types_conflicts.txt
+# you can run the tool locally ./Tools/check_board_types_conflicts.sh
 # MAINTAINERS ONLY: we allow conflicts for very special conditions, in those cases
 # you need to add a comment with "# same" followed by the conflict target so the test passes
 
@@ -58,16 +58,18 @@ TARGET_HW_ARK_CANNODE                  83
 TARGET_HW_ARK_MOSAIC_X5                84
 TARGET_HW_FF_RTK_CAN_GPS               85
 TARGET_HW_PDW_MAS_MAIN-V1              86
-TARGET_HW_ARK_CAN_FLOW_MR              88
 TARGET_HW_ARK_X20_GPS                  89
 TARGET_HW_ARK_F9P_GPS                  90
 TARGET_HW_ARK_MOSAIC_G5                91
 TARGET_HW_ARK_DIST                     92
 TARGET_HW_ARK_MAG                      93
+TARGET_HW_ARK_CAN_FLOW_MR              94
 TARGET_HW_ATL_MANTIS_EDU               97
 TARGET_HW_THE_PEACH_K1                212
 TARGET_HW_THE_PEACH_R1                213
 TARGET_HW_SAAMPIX_V1_1                200
+
+TARGET_HW_TUSTIN_MACH                   1225
 
 Reserved  PX4 [BL] FMU v5X.x           51
 Reserved "PX4 [BL] FMU v6.x"           52
@@ -89,6 +91,9 @@ Reserved "NXP TROPIC Community"        36
 Reserved "NXP MR-TROPIC"               37
 
 Reserved "MNP FMU V6X"                 70
+
+# IDs 110-119 reserved for Syro
+TARGET_HW_SYRO_V6X                     110
 
 # values from external vendors
 EXT_HW_RADIOLINK_MINI_PIX               3
@@ -344,10 +349,14 @@ AP_HW_ESP32S3_PERIPH                 1206
 
 AP_HW_CSKY-PMU                       1212
 
+AP_HW_SIYI-UniFC-6-PICO              1215
+
 AP_HW_MUPilot                        1222
 
 # IDs 1231-1240 reserved for YARI Robotics
 AP_HW_YARIV6X                        1234
+
+AP_HW_GPILOT_P1						 1275
 
 AP_HW_CBUnmanned-CM405-FC            1301
 
@@ -391,6 +400,15 @@ AP_HW_F4BY_F427                      1530
 # IDs 1800-1809 reserved for Aerium Systems
 AP_HW_AERIUM_RADIAN_F405             1800
 AP_HW_AERIUM_RADIAN_H743             1801
+
+# IDs 1930-1949 reserved for Agam Robotics
+AP_HW_AGAM_GNSS-CAN                  1930
+AP_HW_AGAM_GNSSPLUS                  1931
+AP_HW_AGAM_BASE-RTK                  1932
+AP_HW_AGAM_CAN-RTK                   1933
+AP_HW_AGAM_FloRange                  1939
+AP_HW_AGAM_MegH7                     1940
+AP_HW_AGAM_v6XRT                     1949
 
 # IDs 1950-1979 reserved for HC Robotics
 AP_HW_HCR-504                        1950
@@ -504,13 +522,19 @@ AP_HW_IOMCU_F103                     5711
 AP_HW_IOMCU_F103_8MHZ                5712  # some boards are clocked differently
 AP_HW_IOMCU_F100                     5713
 
+#IDs 5740-5749 reserved for Zenithra Tech
+AP_HW_ZenFC_H743                     5740 
 
 #IDs 5800-5809 reserved for Droneer
 AP_HW_DroneerF405                    5800
+AP_HW_DroneerX6                      5801
 
 #IDs 5810-5819 reserved for Brother Hobby
 AP_HW_BrotherHobbyH743               5810
 AP_HW_BrotherHobbyF405v3             5811
+
+#IDs 5830-5839 reserved for CyberX
+AP_HW_CyberX-v10                     5830
 
 # IDs 6000-6099 reserved for SpektreWorks
 AP_HW_sw-spar-f407                   6000
